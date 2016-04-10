@@ -104,6 +104,7 @@ nav {
 nav a,
 nav a:visited {
   color: #fff;
+  text-decoration: none;
 }
 nav a:hover {
   color: #ff8787;
