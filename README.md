@@ -11,7 +11,7 @@ Collection of projects I am working on at [Free Code Camp](https://freecodecamp.
 
 ### Intermediate Front End Development Projects
 
-- [x] Build a Random Quote Machine | [Demo](http://nmarlowe.github.io/fcc/random/)
+- [x] Build a Random Quote Machine | [Demo](http://codepen.io/nmarlowe/full/pbyVyp/)
 - [ ] Show the Local Weather
 - [ ] Build a Wikipedia Viewer
 - [ ] Use the Twitch.tv JSON API
