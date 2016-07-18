@@ -7,7 +7,7 @@
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://api.forecast.io/forecast/5cf25ae33dfda0d56214351deb5401c9/37.209655399999995,-77.46843899999999",
+  "url": "https://api.forecast.io/forecast/5cf25ae33dfda0d56214351deb5401c9/37.209655399999995,-77.46843899999999?exclude=minutely%2Chourly%2Cdaily",
   "method": "GET",
   "headers": {
      "cache-control": "no-cache",
