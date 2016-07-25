@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build a Random Quote Machine | Free Code Camp Basic Front End Development Projects | Neil Marlowe</title>
+
+    <!-- Normalize ___________________________-->
+    <link href="sass/vendors/normalize.css" rel="stylesheet">
+
+    <!-- Google Fonts ________________________ -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Merriweather|Source+Code+Pro|Source+Sans+Pro:400,400italic,700,700italic,800" rel="stylesheet">
+
+    <!-- Bootstrap ___________________________ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Font Awesome ________________________ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body onload="loadQuote()">
+
+  <header class="heading">
+    <div class="container-fluid">
+
+            <div class="text-center">
+            <h1>Random Quote  <span><img src="img/rainbow4.jpg"></span> Machine</h1>
+          </div>
+
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="jumbotron">
+          <div class="panel">
+          <div class="title">
+            **** RANDOM QUOTE MACHINE V1 ****<br>
+            64K RAM SYSTEM &nbsp; 38911 BASIC BYTES FREE
+          </div>
+          <br>
+          <div id="quote"></div>
+          <br>
+          <a href="" id="authorLink" target="_blank"><div id="author"></div></a>
+          <br>
+          Courtesy of <a href="http://api.andrux.net" target="_blank">andrux.net</a>
+          <br><br>
+          READY.
+          <br>
+          <span class="blinking-cursor">&#9608;</span>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid text-center">
+    <!-- TODO: Add Back button to repeat the last quote -->
+    <button type="button" class="btn btn-default mybtn fa fa-refresh fa-3x" onclick="loadQuote()"></button>
+    <a href="" id="tweetLink" class="btn btn-default mybtn fa fa-twitter fa-3x" target="_blank"></a>
+  </div>
+
+  <footer>
+    <p><span class="fa fa-hand-peace-o fa-lg peace"></span> and  <span class="fa fa-heart fa-lg love"></span>, <a href="http://neilmarlowe.com" target="_blank">neil</a></p><br>
+  </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="js/random.js"></script>
+
+</body>
+
+</html>
