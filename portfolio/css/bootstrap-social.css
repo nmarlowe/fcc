@@ -19,14 +19,6 @@
 .btn-social-icon.btn-lg{height:45px;width:45px;padding-left:0;padding-right:0}
 .btn-social-icon.btn-sm{height:30px;width:30px;padding-left:0;padding-right:0}
 .btn-social-icon.btn-xs{height:22px;width:22px;padding-left:0;padding-right:0}
-
-.btn-500px{color:#fff;background-color:#999;border-color:rgba(0,0,0,0.2)}.btn-500px:focus,.btn-500px.focus{color:#fff;background-color:#0099e5;border-color:rgba(0,0,0,0.2)}
-.btn-500px:hover{color:#fff;background-color:#0099e5;border-color:rgba(0,0,0,0.2)}
-.btn-500px:active,.btn-500px.active,.open>.dropdown-toggle.btn-500px{color:#fff;background-color:#0099e5;border-color:rgba(0,0,0,0.2)}.btn-500px:active:hover,.btn-500px.active:hover,.open>.dropdown-toggle.btn-500px:hover,.btn-500px:active:focus,.btn-500px.active:focus,.open>.dropdown-toggle.btn-500px:focus,.btn-500px:active.focus,.btn-500px.active.focus,.open>.dropdown-toggle.btn-500px.focus{color:#fff;background-color:#0099e5;border-color:rgba(0,0,0,0.2)}
-.btn-500px:active,.btn-500px.active,.open>.dropdown-toggle.btn-500px{background-image:none}
-.btn-500px.disabled,.btn-500px[disabled],fieldset[disabled] .btn-500px,.btn-500px.disabled:hover,.btn-500px[disabled]:hover,fieldset[disabled] .btn-500px:hover,.btn-500px.disabled:focus,.btn-500px[disabled]:focus,fieldset[disabled] .btn-500px:focus,.btn-500px.disabled.focus,.btn-500px[disabled].focus,fieldset[disabled] .btn-500px.focus,.btn-500px.disabled:active,.btn-500px[disabled]:active,fieldset[disabled] .btn-500px:active,.btn-500px.disabled.active,.btn-500px[disabled].active,fieldset[disabled] .btn-500px.active{background-color:#205081;border-color:rgba(0,0,0,0.2)}
-.btn-500px .badge{color:#205081;background-color:#fff}
-
 .btn-adn{color:#fff;background-color:#d87a68;border-color:rgba(0,0,0,0.2)}.btn-adn:focus,.btn-adn.focus{color:#fff;background-color:#ce563f;border-color:rgba(0,0,0,0.2)}
 .btn-adn:hover{color:#fff;background-color:#ce563f;border-color:rgba(0,0,0,0.2)}
 .btn-adn:active,.btn-adn.active,.open>.dropdown-toggle.btn-adn{color:#fff;background-color:#ce563f;border-color:rgba(0,0,0,0.2)}.btn-adn:active:hover,.btn-adn.active:hover,.open>.dropdown-toggle.btn-adn:hover,.btn-adn:active:focus,.btn-adn.active:focus,.open>.dropdown-toggle.btn-adn:focus,.btn-adn:active.focus,.btn-adn.active.focus,.open>.dropdown-toggle.btn-adn.focus{color:#fff;background-color:#b94630;border-color:rgba(0,0,0,0.2)}
@@ -39,14 +31,6 @@
 .btn-bitbucket:active,.btn-bitbucket.active,.open>.dropdown-toggle.btn-bitbucket{background-image:none}
 .btn-bitbucket.disabled,.btn-bitbucket[disabled],fieldset[disabled] .btn-bitbucket,.btn-bitbucket.disabled:hover,.btn-bitbucket[disabled]:hover,fieldset[disabled] .btn-bitbucket:hover,.btn-bitbucket.disabled:focus,.btn-bitbucket[disabled]:focus,fieldset[disabled] .btn-bitbucket:focus,.btn-bitbucket.disabled.focus,.btn-bitbucket[disabled].focus,fieldset[disabled] .btn-bitbucket.focus,.btn-bitbucket.disabled:active,.btn-bitbucket[disabled]:active,fieldset[disabled] .btn-bitbucket:active,.btn-bitbucket.disabled.active,.btn-bitbucket[disabled].active,fieldset[disabled] .btn-bitbucket.active{background-color:#205081;border-color:rgba(0,0,0,0.2)}
 .btn-bitbucket .badge{color:#205081;background-color:#fff}
-
-.btn-codepen{color:#fff;background-color:#999;border-color:rgba(0,0,0,0.2)}.btn-codepen:focus,.btn-codepen.focus{color:#fff;background-color:#ff8787;border-color:rgba(0,0,0,0.2)}
-.btn-codepen:hover{color:#fff;background-color:#ff8787;border-color:rgba(0,0,0,0.2)}
-.btn-codepen:active,.btn-codepen.active,.open>.dropdown-toggle.btn-codepen{color:#fff;background-color:#ff8787;border-color:rgba(0,0,0,0.2)}.btn-codepen:active:hover,.btn-codepen.active:hover,.open>.dropdown-toggle.btn-codepen:hover,.btn-codepen:active:focus,.btn-codepen.active:focus,.open>.dropdown-toggle.btn-codepen:focus,.btn-codepen:active.focus,.btn-codepen.active.focus,.open>.dropdown-toggle.btn-codepen.focus{color:#fff;background-color:#0f253c;border-color:rgba(0,0,0,0.2)}
-.btn-codepen:active,.btn-codepen.active,.open>.dropdown-toggle.btn-codepen{background-image:none}
-.btn-codepen.disabled,.btn-codepen[disabled],fieldset[disabled] .btn-codepen,.btn-codepen.disabled:hover,.btn-codepen[disabled]:hover,fieldset[disabled] .btn-codepen:hover,.btn-codepen.disabled:focus,.btn-codepen[disabled]:focus,fieldset[disabled] .btn-codepen:focus,.btn-codepen.disabled.focus,.btn-codepen[disabled].focus,fieldset[disabled] .btn-codepen.focus,.btn-codepen.disabled:active,.btn-codepen[disabled]:active,fieldset[disabled] .btn-codepen:active,.btn-codepen.disabled.active,.btn-codepen[disabled].active,fieldset[disabled] .btn-codepen.active{background-color:#205081;border-color:rgba(0,0,0,0.2)}
-.btn-codepen .badge{color:#205081;background-color:#fff}
-
 .btn-dropbox{color:#fff;background-color:#1087dd;border-color:rgba(0,0,0,0.2)}.btn-dropbox:focus,.btn-dropbox.focus{color:#fff;background-color:#0d6aad;border-color:rgba(0,0,0,0.2)}
 .btn-dropbox:hover{color:#fff;background-color:#0d6aad;border-color:rgba(0,0,0,0.2)}
 .btn-dropbox:active,.btn-dropbox.active,.open>.dropdown-toggle.btn-dropbox{color:#fff;background-color:#0d6aad;border-color:rgba(0,0,0,0.2)}.btn-dropbox:active:hover,.btn-dropbox.active:hover,.open>.dropdown-toggle.btn-dropbox:hover,.btn-dropbox:active:focus,.btn-dropbox.active:focus,.open>.dropdown-toggle.btn-dropbox:focus,.btn-dropbox:active.focus,.btn-dropbox.active.focus,.open>.dropdown-toggle.btn-dropbox.focus{color:#fff;background-color:#0a568c;border-color:rgba(0,0,0,0.2)}

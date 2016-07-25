@@ -31,7 +31,7 @@ header {
   margin: 0 0 30px 0;
   padding: 5px 0 0 0;
   width: 100%;
-  z-index: 100; }
+  position: relative; }
 
 #logo {
   text-align: center;
@@ -127,7 +127,7 @@ a.thumbnail:active {
 .love {
   color: #ff0000; }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 660px) {
   nav {
     background: none;
     float: right;
