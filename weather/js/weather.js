@@ -10,7 +10,7 @@ function loadWeather(pos) {
       html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+      html += '<img src="'+weather.image+'">';
 
       $("#weather").html(html);
 
