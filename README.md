@@ -7,11 +7,11 @@ Collection of projects I am working on at [Free Code Camp](https://freecodecamp.
 ### Basic Front End Development Projects
 
 - [x] Build a Tribute Page | [Demo](https://nmarlowe.github.io/fcc/tribute/) | [Source Code](https://github.com/nmarlowe/fcc/tree/gh-pages/tribute)
-- [x] Build a Personal Portfolio Webpage | [Demo](http://neilmarlowe.com/)
+- [x] Build a Personal Portfolio Webpage | [Demo](https://nmarlowe.github.io/) | [Source Code](https://github.com/nmarlowe/nmarlowe.github.io/)
 
 ### Intermediate Front End Development Projects
 
-- [x] Build a Random Quote Machine | [Demo](http://codepen.io/nmarlowe/full/pbyVyp/)
+- [x] Build a Random Quote Machine | [Demo](https://nmarlowe.github.io/fcc/random/) | [Source Code](https://github.com/nmarlowe/fcc/tree/gh-pages/random/)
 - [ ] Show the Local Weather
 - [ ] Build a Wikipedia Viewer
 - [ ] Use the Twitch.tv JSON API
