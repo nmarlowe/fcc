@@ -17,6 +17,14 @@ i {
   text-transform: none;
 }
 
+.high {
+  color: #ffc0cb;
+}
+
+.low {
+  color: #CBFFC0;
+}
+
 @font-face {
     font-family: 'weather';
     src: url('artillcleanweathericons-Regular.ttf'); format('truetype')
