@@ -30,7 +30,7 @@ i {
 
 .footer {
   clear: both;
-  font-size: 1em;
+  font-size: 1.5em;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -55,7 +55,8 @@ i {
 }
 
 .love {
-  color: #f00;
+  /*color: #f00; */
+  color: #ff69b4;
 }
 
 @font-face {
