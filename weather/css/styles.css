@@ -61,7 +61,14 @@ i {
 
 @font-face {
     font-family: 'weather';
-    src: url('artillcleanweathericons-Regular.ttf'); format('truetype')
+    /*src: url('artillcleanweathericons-Regular.ttf'); format('truetype')
+    font-weight: normal;
+    font-style: normal;*/
+    src: url('artillcleanweathericons-Regular.eot');
+    src: url('artillcleanweathericons-Regular.eot?#iefix')
+             format('embedded-opentype'),
+         url('artillcleanweathericons-Regular.woff') format('woff'),
+         url('artillcleanweathericons-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

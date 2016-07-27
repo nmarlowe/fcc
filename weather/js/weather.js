@@ -1,3 +1,19 @@
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log(position.coords.latitude + "," + position.coords.longitude);
+    loadWeather(position.coords.latitude + "," + position.coords.longitude)
+  },
+  function (error) {
+    if (error.code == error.PERMISSION_DENIED)
+        console.log("you denied me :-(");
+        html = '<h2>You must allow location services in your browser</h2>';
+        $("#weather").html(html);
+  });
+} else {
+  console.log("Geolocation not supported in your browser");
+  html = '<h2>Geolocation is not supported in your browser</h2>';
+  $("#weather").html(html);
+}
 
 function loadWeather(pos) {
   $.simpleWeather({
@@ -47,3 +63,11 @@ function loadWeather(pos) {
     }
   });
 }
+
+/*************
+Reload page every 60 minutes
+*************/
+
+$(document).ready(function() {
+    setInterval("location.reload(true)", 3600000);
+});

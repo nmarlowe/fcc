@@ -1,17 +1,3 @@
-
-// if ("geolocation" in navigator) {
-//   console.log("Geo Yes");
-//   navigator.geolocation.getCurrentPosition(function(position, error) {
-//     console.log(position.coords.latitude + "," + position.coords.longitude)
-//     loadWeather(position.coords.latitude + "," + position.coords.longitude);
-//   },
-//   function(error){
-//     if (error.code == error.PERMISSION_DENIED) {
-//       html = '<h2>Geolocation is not available in your browser</h2>'
-//     }
-//   });
-// }
-
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
     console.log(position.coords.latitude + "," + position.coords.longitude);
