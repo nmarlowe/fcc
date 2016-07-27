@@ -66,6 +66,42 @@ i {
     font-style: normal;
 }
 
+@media screen and (min-width: 320px) {
+  /*footer {
+    height: 100%;
+  }*/
+  h1 {
+    font-size: 1.5em;
+  }
+
+  /*.heading {
+    border-radius: 40px;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    width: 90%;
+  }*/
+
+  .panel {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  /*.heading {
+    border-radius: 40px;
+    margin: 30px auto;
+    padding-bottom: 5px;
+    width: 90%;
+  }*/
+
+  .panel {
+    font-size: 16px;
+  }
+}
 
 .icon-0:before { content: ":"; }
 .icon-1:before { content: "p"; }
