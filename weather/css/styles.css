@@ -30,7 +30,7 @@ i {
 
 .footer {
   clear: both;
-  font-size: 1.25em;
+
   position: absolute;
   right: 0;
   bottom: 0;
@@ -91,9 +91,13 @@ i {
   .panel {
     font-size: 12px;
   }
+
+  .footer {
+    font-size: 1rem;
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 960px) {
 
   h2 {
     font-size: 3rem;
@@ -116,6 +120,10 @@ i {
 
   .panel {
     font-size: 16px;
+  }
+
+  .footer {
+    font-size: 1.25rem;
   }
 }
 
