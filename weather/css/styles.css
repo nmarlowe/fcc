@@ -71,11 +71,15 @@ i {
     height: 100%;
   }*/
   h2 {
-    font-size: 2em;
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
   }
 
   h4 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   /*.heading {
     border-radius: 40px;
@@ -90,12 +94,17 @@ i {
 }
 
 @media screen and (min-width: 1200px) {
+
   h2 {
-    font-size: 3em;
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
   }
 
   h4 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
   }
 
   /*.heading {
