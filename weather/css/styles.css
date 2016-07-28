@@ -59,6 +59,12 @@ i {
   color: #FF369B;
 }
 
+#unit, #unit:active, #unit:visited {
+  background-color: #222;
+  border-style: none;
+  color: #eee;
+}
+
 @font-face {
     font-family: 'weather';
     /*src: url('artillcleanweathericons-Regular.ttf'); format('truetype')
