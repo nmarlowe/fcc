@@ -29,7 +29,7 @@ function loadWeather(pos) {
 
       html = '<h2>Current Weather For '+weather.city+', '+weather.region+'</h2>';
       html += '<h4><i class="icon-'+weather.code+'"></i>&nbsp;'+weather.currently+'</h4>';
-      html += '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br />';
 
       changeForecast();
 
