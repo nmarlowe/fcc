@@ -37,17 +37,17 @@ function loadWeather(pos) {
       //alert("C: " + tempC);
       //var tempC = Math.round((weather.temp - 32) * 5 / 9);
       $("#loading").hide();
-      $("#location").html("Current Weather For " + weather.city + ", " + weather.region);
-      $("#current-icon").html('<i class="icon-' + weather.code +'"></i>&nbsp;' + weather.currently);
-      $("#temp-now").html(weather.temp + '&deg;F');
+      $("#location").html("<h2>Current Weather For " + weather.city + ", " + weather.region+'<h2>');
+      $("#current-icon").html('<h4><i class="wi wi-yahoo-' + weather.code +'"></i>&nbsp;' + weather.currently + '</h4>');
+      $("#temp-now").html('<h2>' + weather.temp + '&deg;F</h2>');
 
       changeForecast();
 
 
-      todayForecast = '<h4>Today: &nbsp;<i class="icon-'+weather.forecast[0].code+'"></i>&nbsp;'+weather.forecast[0].text+'</h4><br>';
+      todayForecast = '<h4>Today: &nbsp;<i class="wi wi-yahoo-'+weather.forecast[0].code+'"></i>&nbsp;'+weather.forecast[0].text+'</h4><br>';
       todayForecast += '<h4><i class="fa fa-arrow-up fa-1x high"></i>&nbsp;<span id="todayHigh">'+weather.high+'</span>&nbsp;&nbsp;<i class="fa fa-arrow-down fa-1x low"></i>&nbsp;<span id="todayLow">'+weather.low+'</span></h4>';
 
-      tomorrowForecast = '<h4>Tomorrow: &nbsp;<i class="icon-'+weather.forecast[1].code+'"></i>&nbsp;'+weather.forecast[1].text+'</h4><br>';
+      tomorrowForecast = '<h4>Tomorrow: &nbsp;<i class="wi wi-yahoo-'+weather.forecast[1].code+'"></i>&nbsp;'+weather.forecast[1].text+'</h4><br>';
       tomorrowForecast += '<h4><i class="fa fa-arrow-up fa-1x high"></i>&nbsp;<span id="tomorrowHigh">'+weather.forecast[1].high+'</span>&nbsp;&nbsp;<i class="fa fa-arrow-down fa-1x low"></i>&nbsp;<span id="tomorrowLow">'+weather.forecast[1].low+'</span></h4>';
 
 
