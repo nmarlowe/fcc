@@ -1,22 +1,46 @@
 
+html,
 body {
 	font-family: sans-serif;
-	font-size: 100%;
   height: 100%;
-	margin-top: 60px;
+  margin: 0;
+  padding: 0;
 	color: #eee;
 	background-color: #222;
 }
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
 
+#header {
+  padding: 5px;
+}
+
+#content {
+  padding: 10px;
+  padding-bottom: 20px;
+}
 
 i {
   color: #eee;
-  /*Sfont-family: weather;*/
   font-size: 40px;
   font-weight: normal;
   font-style: normal;
   line-height: 1.0;
   text-transform: none;
+}
+
+#current-icon {
+  padding-top: 1.2rem;
+}
+
+#forecast {
+  padding-top: 2rem;
+}
+
+#sunrise {
+  padding-bottom: 2rem;
 }
 
 .high {
@@ -27,25 +51,21 @@ i {
   color: #99cfe0;
 }
 
-.footer {
-  clear: both;
-
+#footer {
   position: absolute;
-  right: 0;
   bottom: 0;
-  left: 0;
-  /*padding: 1rem;*/
-  /*padding-top: 20px;*/
+  width:100%;
+  height: 20px;
   background-color: #222;
   text-align: center;
 }
 
-.footer a {
+#footer a {
   color: #eee;
   text-decoration: underline;
 }
 
-.footer a:hover, .footer a:visited {
+#footer a:hover, .footer a:visited {
   color: #eee;
 }
 
@@ -54,20 +74,22 @@ i {
 }
 
 .love {
-  /*color: #f00; */
   color: #FF369B;
 }
 
-#unit, #unit:active, #unit:visited {
-  background-color: #222;
-  border-style: none;
-  color: #eee;
+@font-face {
+    font-family: 'weather';
+    src: url('artillcleanweathericons-Regular.eot');
+    src: url('artillcleanweathericons-Regular.eot?#iefix')
+             format('embedded-opentype'),
+         url('artillcleanweathericons-Regular.woff') format('woff'),
+         url('artillcleanweathericons-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @media screen and (min-width: 320px) {
-  /*footer {
-    height: 100%;
-  }*/
+
   h2 {
     font-size: 2rem;
   }
@@ -79,18 +101,12 @@ i {
   h4 {
     font-size: 1.5rem;
   }
-  /*.heading {
-    border-radius: 40px;
-    margin: 10px auto;
-    padding-bottom: 10px;
-    width: 90%;
-  }*/
 
   .panel {
     font-size: 12px;
   }
 
-  .footer {
+  #footer {
     font-size: 1rem;
   }
 }
@@ -98,7 +114,7 @@ i {
 @media screen and (min-width: 960px) {
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 
   h3 {
@@ -109,18 +125,11 @@ i {
     font-size: 1.75rem;
   }
 
-  /*.heading {
-    border-radius: 40px;
-    margin: 30px auto;
-    padding-bottom: 5px;
-    width: 90%;
-  }*/
-
   .panel {
     font-size: 16px;
   }
 
-  .footer {
-    font-size: 1.25rem;
+  #footer {
+    font-size: 1.20rem;
   }
 }

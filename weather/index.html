@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Show the Local Weather | Free Code Camp Basic Front End Development Projects | Neil Marlowe</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -21,58 +21,35 @@
 
   </head>
   <body>
-    <!--TODO: Add place holders for values so I can click temp to switch Fahrenheit/Celcius?  -->
-    <div class="container-fluid text-center">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div id="panel">
-            <div id="loading">
-              <h3><i class="fa fa-cog fa-spin fa-2x fa-fw"></i>Fetching local weather...<span class="sr-only">Fetching local weather...</span></h3>
+    <div id="wrapper">
+      <div id="header"></div>
+      <div id="content">
+        <div class="container-fluid text-center">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+              <div id="panel">
+                <div id="loading">
+                  <h3><i class="fa fa-cog fa-spin fa-2x fa-fw"></i>Fetching local weather...<span class="sr-only">Fetching local weather...</span></h3>
+                </div>
+                <div id="location"></div><br>
+                <div id="current-icon"></div>
+                <div id="temp-now"></div>
+                <div id="sunrise"></div><br />
+                <div id="forecast"></div>
+              </div>
             </div>
-            <div id="today">
-              <div id="location"></div><br>
-              <div id="current-icon"></div><br>
-              <div id="temp-now"></div><br>
-              <div id="forecast"></div>
-            </div>
-            <!-- <div id="weather">
-              <h3 id="loading"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i>Fetching local weather...<span class="sr-only">Fetching local weather...</span></h3>
-              <h2><span id="location"></span></h2>
-              <h4><span id="current-icon"></span></h4>
-              <h2><a href="#" id="changeUnit"><span id="temp-now"></span></a></h2>
-            </div> -->
-            <!-- <div id="forecast">
-
-            </div> -->
           </div>
         </div>
       </div>
-    </div>
-
-
-    <!-- <div class="container-fluid text-center">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div id="panel">
-            <div id="weather">
-              <h3><i class="fa fa-cog fa-spin fa-2x fa-fw"></i>Fetching local weather...<span class="sr-only">Fetching local weather...</span></h3>
-            </div>
-            <div id="forecast"></div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-    <div class="footer">
+      <div id="footer">
+      <!-- <h5><a href="#" id="units">Celsius?</a></h5><br /> -->
       <p><span class="fa fa-hand-peace-o peace"></span> and  <span class="fa fa-heart love"></span>, <a href="http://neilmarlowe.com">neil</a></p><br>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="https://cdn.rawgit.com/monkeecreate/jquery.simpleWeather/master/jquery.simpleWeather.min.js"></script>
+      <script src="js/weather.js"></script>
     </div>
-
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdn.rawgit.com/monkeecreate/jquery.simpleWeather/master/jquery.simpleWeather.min.js"></script>
-    <script src="js/weather.js"></script>
-
   </body>
 </html>

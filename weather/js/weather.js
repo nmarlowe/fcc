@@ -1,48 +1,37 @@
+var lat, lon;
+var metric = false;
+
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    console.log(position.coords.latitude + "," + position.coords.longitude);
-    loadWeather(position.coords.latitude + "," + position.coords.longitude);
+    lat = position.coords.latitude;
+    lon = position.coords.longitude;
+    console.log(lat + "," + lon);
+    loadWeather(lat + "," + lon, "f");
   },
   function (error) {
     if (error.code == error.PERMISSION_DENIED){
-        console.log("you denied me :-(");
-        //html = '<h2>You must allow location services in your browser</h2>';
-        //$("#weather").html(html);
+        console.log("Geolocation Denied");
         loadWeather(prompt("Enter your postal code"));
       }
   });
 } else {
   console.log("Geolocation not supported in your browser");
-  //html = '<h2>Geolocation is not supported in your browser</h2>';
   loadWeather(prompt("Enter your postal code"));
-  //$("#weather").html(html);
 }
 
-// var metric = false;
-// var tempC, tempF;
-
-function loadWeather(pos) {
+function loadWeather(pos, unit) {
   $.simpleWeather({
     location: pos,
-    units: "f",
+    unit: unit,
     success: function(weather) {
       console.log(weather);
 
-      // html = '<h2>Current Weather For '+weather.city+', '+weather.region+'</h2>';
-      // html += '<h4><i class="icon-'+weather.code+'"></i>&nbsp;'+weather.currently+'</h4>';
-      // html += '<h2><a href="#" id="current-temp">'+weather.temp+'&deg;'+weather.units.temp+'</a></h2><br />';
-      var tempC = weather.alt.temp;
-      var tempF = weather.temp;
-
-      //alert("C: " + tempC);
-      //var tempC = Math.round((weather.temp - 32) * 5 / 9);
       $("#loading").hide();
       $("#location").html("<h2>Current Weather For " + weather.city + ", " + weather.region+'<h2>');
-      $("#current-icon").html('<h4><i class="wi wi-yahoo-' + weather.code +'"></i>&nbsp;' + weather.currently + '</h4>');
-      $("#temp-now").html('<h2>' + weather.temp + '&deg;F</h2>');
+      $("#current-icon").html('<h2><i class="wi wi-yahoo-' + weather.code +'"></i>&nbsp;' + weather.currently + '&nbsp; | &nbsp;' + weather.temp + '&deg;' + weather.units.temp + ' </h2><br>');
+      $("#sunrise").html('<h4><i class="wi wi-sunrise"></i> ' + weather.sunrise + '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<i class="wi wi-sunset"></i> ' + weather.sunset + '</h4>');
 
       changeForecast();
-
 
       todayForecast = '<h4>Today: &nbsp;<i class="wi wi-yahoo-'+weather.forecast[0].code+'"></i>&nbsp;'+weather.forecast[0].text+'</h4><br>';
       todayForecast += '<h4><i class="fa fa-arrow-up fa-1x high"></i>&nbsp;<span id="todayHigh">'+weather.high+'</span>&nbsp;&nbsp;<i class="fa fa-arrow-down fa-1x low"></i>&nbsp;<span id="todayLow">'+weather.low+'</span></h4>';
@@ -50,15 +39,17 @@ function loadWeather(pos) {
       tomorrowForecast = '<h4>Tomorrow: &nbsp;<i class="wi wi-yahoo-'+weather.forecast[1].code+'"></i>&nbsp;'+weather.forecast[1].text+'</h4><br>';
       tomorrowForecast += '<h4><i class="fa fa-arrow-up fa-1x high"></i>&nbsp;<span id="tomorrowHigh">'+weather.forecast[1].high+'</span>&nbsp;&nbsp;<i class="fa fa-arrow-down fa-1x low"></i>&nbsp;<span id="tomorrowLow">'+weather.forecast[1].low+'</span></h4>';
 
-
       var today = true;
-      var nIntervId;
+      //var nIntervId;
 
-      //$("#weather").html(html);
        $("#forecast").html(todayForecast);
 
+       /************
+       Rotates forcast between today and tomorrow every 5 seconds
+       ************/
+
       function changeForecast() {
-        nIntervId = setInterval(forecast, 5000);
+        var nIntervId = setInterval(forecast, 5000);
       }
 
       function forecast() {
@@ -70,24 +61,6 @@ function loadWeather(pos) {
           today = true;
         }
       }
-
-      var metric = false;
-
-      $("#changeUnit").click(function() {
-        if (metric === false) {
-          $("#temp-now").html(weather.alt.temp + '&deg;C');
-          $("#todayHigh").html(weather.forecast[0].alt.high);
-          $("#todayLow").html(weather.forecast[0].alt.low);
-          metric = true;
-        } else {
-          $("#temp-now").html(weather.temp + '&deg;F');
-          $("#tomorrowHigh").html(weather.forecast[1].alt.high);
-          $("#tomorrowLow").html(weather.forecast[1].alt.low);
-          metric = false;
-        }
-      });
-
-
     },
     error: function(error) {
       console.log(error);
@@ -95,8 +68,6 @@ function loadWeather(pos) {
       $("#weather").html(html);
     }
   });
-
-
 }
 
 /*************
@@ -107,14 +78,19 @@ $(document).ready(function() {
     setInterval("location.reload(true)", 3600000);
 });
 
-// $("#changeUnit").click(function() {
+// /************
+// Changes from Fahrenheit to Celsius
+// FIXME: Messes up the rotating forecast!!!!
+// ************/
+//
+// $("#units").click(function() {
 //   if (metric === false) {
-//     alert(metric);
-//     $("#temp-now").html(tempC + '&deg;C');
+//     loadWeather(lat + "," + lon, "c");
 //     metric = true;
+//     $("#units").html("Fahrenheit?");
 //   } else {
-//     alert(metric);
-//     $("#temp-now").html(tempF + '&deg;F');
+//     loadWeather(lat + "," + lon, "f");
 //     metric = false;
+//     $("#units").html("Celsius?");
 //   }
-// });
+//});
