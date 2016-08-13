@@ -12,7 +12,7 @@ Collection of projects I am working on at [Free Code Camp](https://freecodecamp.
 ### Intermediate Front End Development Projects
 
 - [x] Build a Random Quote Machine | [Demo](https://nmarlowe.github.io/fcc/random/) | [Source Code](https://github.com/nmarlowe/fcc/tree/gh-pages/random/)
-- [ ] Show the Local Weather
+- [x] Show the Local Weather | [Demo](https://nmarlowe.github.io/fcc/weather/) | [Source Code](https://github.com/nmarlowe/fcc/tree/gh-pages/weather/)
 - [ ] Build a Wikipedia Viewer
 - [ ] Use the Twitch.tv JSON API
 
