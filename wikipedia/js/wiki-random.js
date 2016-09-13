@@ -7,11 +7,15 @@ Replace intro with bluepill or redpill text
 
 */
 
-
-$(function() {
-  $(".bluepill").click(function() {
-    $(".bluepill").addClass("animated zoomOut");
-    $(".choices").delay(2000)
-    .animate({opacity: '0'}, 'slow');
-  });
+$(document).keydown(function(event){
+  if (event.which == 49) {
+    alert("Key 1 Pressed");
+  } else if (event.which == 50) {
+    window.open("https://en.wikipedia.org/wiki/Special:RandomRootpage", "_self");
+  }
 })
+
+
+/*
+Use https://en.wikipedia.org/?curid=18630637 to load article with page_id that is returned from random api call
+*/

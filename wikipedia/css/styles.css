@@ -26,12 +26,25 @@ body {
 .main-menu li {
   padding-bottom: 10px;
 }
+
 h3 {
   padding-bottom: 30px;
 }
 
+.menu-item,
+.menu-item:hover,
+.menu-item:visited,
+.menu-item:focus {
+  color: #1cbf2a;
+  text-decoration: none;
+}
+
 .command-prompt {
   padding-top: 30px;
+}
+
+#target {
+  background-color: #181818;
 }
 
 .cursor {
