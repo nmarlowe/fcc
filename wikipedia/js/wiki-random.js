@@ -18,21 +18,21 @@ $(document).keydown(function(event){
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&generator=random&exsentences=5&grnnamespace=0",
+  "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=extracts&generator=random&exsentences=10&grnnamespace=0&indexpageids=",
   "method": "GET",
   "headers": {
     "cache-control": "no-cache",
-    "postman-token": "7dd310e6-893b-e6c7-ba15-c4169e1df76a"
+    "postman-token": "f3442c5d-b749-bf3a-f58c-5d5c77ed697f"
   }
 };
 
 $.ajax(settings).done(function (response) {
   var pageID = "";
 
-  pageID = String(Object.keys(response.query.pages));
+  pageID = Object.keys(response.query.pageids[0]);
   //pageTitle = Object.keys(response.query.pages.pageID.title);
   //console.log(pageTitle);
-  alert(pageID);
+  console.log(pageID);
 });
 
 /*
