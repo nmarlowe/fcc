@@ -28,11 +28,17 @@ var settings = {
 
 $.ajax(settings).done(function (response) {
   var pageID = "";
+  var title = "";
+  var extract = "";
 
-  pageID = Object.keys(response.query.pageids[0]);
+  pageID = response.query.pageids[0];
+  title = response.query.pages[0].title;
+  extract = response.query.pages[0].extract;
   //pageTitle = Object.keys(response.query.pages.pageID.title);
   //console.log(pageTitle);
-  console.log(pageID);
+  console.log("Page ID: " + pageID);
+  console.log("Title: " + title);
+  console.log("Extract: " + extract);
 });
 
 /*
