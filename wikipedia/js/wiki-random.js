@@ -10,36 +10,57 @@ Replace intro with bluepill or redpill text
 $(document).keydown(function(event) {
 
   if (event.which === 49) {
-      alert("Key 1 Pressed");
+    searchWikipedia();
   } else if (event.which === 50) {
-      // window.open("https://en.wikipedia.org/wiki/Special:RandomRootpage", "_self");
-      $.ajax(settings).done(function(response) {
-          var pageID = "";
-          var title = "";
-          var extract = "";
-
-          pageID = response.query.pageids[0];
-          title = response.query.pages[0].title;
-          extract = response.query.pages[0].extract;
-          //pageTitle = Object.keys(response.query.pages.pageID.title);
-          //console.log(pageTitle);
-          console.log("Page ID: " + pageID);
-          console.log("Title: " + title);
-          console.log("Extract: " + extract);
-
-          $("#first-screen").hide();
-          $("#results").html('Page Title: ' + title + '<br><br>' + 'Page Intro: ' + extract + '<br><br>' + 'Would you like to [c]ontinue to the page or go [b]ack to the main menu? ===><span class="cursor">_</span>');
-
-          $(document).keydown(function(event) {
-              if (event.which === 67) {
-                  window.open("https://en.wikipedia.org/?curid=" + pageID, "_self");
-              } else if (event.which === 66) {
-                  location.reload();
-              }
-          });
-      });
+    randomArticle();
     }
 });
+
+$(function() {
+    $("#menu-2").click(function(e) {
+      e.preventDefault(); // if desired...
+      randomArticle();
+    });
+  });
+
+$(function() {
+    $("#menu-1").click(function(e) {
+      e.preventDefault(); // if desired...
+      searchWikipedia();
+    });
+  });
+
+function randomArticle() {
+  $.ajax(settings).done(function(response) {
+      var pageID = "";
+      var title = "";
+      var extract = "";
+
+      pageID = response.query.pageids[0];
+      title = response.query.pages[0].title;
+      extract = response.query.pages[0].extract;
+      //pageTitle = Object.keys(response.query.pages.pageID.title);
+      //console.log(pageTitle);
+      console.log("Page ID: " + pageID);
+      console.log("Title: " + title);
+      console.log("Extract: " + extract);
+
+      $("#first-screen").hide();
+      $("#results").html('Page Title: ' + title + '<br><br>' + 'Page Intro: ' + extract + '<br><br>' + 'Would you like to [c]ontinue to the page or go [b]ack to the main menu? ===><span class="cursor">_</span>');
+
+      $(document).keydown(function(event) {
+          if (event.which === 67) {
+              window.open("https://en.wikipedia.org/?curid=" + pageID, "_self");
+          } else if (event.which === 66) {
+              location.reload();
+          }
+      });
+  });
+};
+
+function searchWikipedia(){
+  alert("Key 1 Pressed");
+};
 
 var settings = {
     "async": true,
