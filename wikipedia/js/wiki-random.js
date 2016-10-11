@@ -11,7 +11,6 @@ $(document).keydown(function(event) {
 
   if (event.which === 49) {
       alert("Key 1 Pressed");
-      secondPage = true;
   } else if (event.which === 50) {
       // window.open("https://en.wikipedia.org/wiki/Special:RandomRootpage", "_self");
       $.ajax(settings).done(function(response) {
@@ -45,12 +44,8 @@ $(document).keydown(function(event) {
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=extracts&generator=random&exsentences=10&grnnamespace=0&indexpageids=",
-    "method": "GET",
-    "headers": {
-        "cache-control": "no-cache",
-        "postman-token": "f3442c5d-b749-bf3a-f58c-5d5c77ed697f"
-    }
+    "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&origin=%2A&prop=extracts&generator=random&exsentences=10&grnnamespace=0&indexpageids=",
+    "type": "GET"
 };
 
 
