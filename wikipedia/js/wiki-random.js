@@ -46,21 +46,46 @@ function randomArticle() {
       console.log("Extract: " + extract);
 
       $("#first-screen").hide();
-      $("#results").html('Page Title: ' + title + '<br><br>' + 'Page Intro: ' + extract + '<br><br>' + 'Would you like to [c]ontinue to the page or go [b]ack to the main menu? ===><span class="cursor">_</span>');
+      $("#results").empty().append('Page Title: ' + title + '<br><br>' + 'Page Intro: ' + extract + '<br><br>' + 'Would you like to <a href="#" id="continue-next" class="menu-item">[c]ontinue</a> to the page or go <a href="#" id="back" class="menu-item">[b]ack</a> to the main menu? ===> <span class="cursor">_</span>');
 
       $(document).keydown(function(event) {
           if (event.which === 67) {
-              window.open("https://en.wikipedia.org/?curid=" + pageID, "_self");
+              continueNext();
           } else if (event.which === 66) {
-              location.reload();
+              back();
           }
       });
+      $(function() {
+          $("#continue-next").click(function(e) {
+            e.preventDefault(); // if desired...
+            continueNext();
+          });
+        });
+
+      $(function() {
+          $("#back").click(function(e) {
+            e.preventDefault(); // if desired...
+            back();
+          });
+        });
+
+      function continueNext(){
+        window.open("https://en.wikipedia.org/?curid=" + pageID, "_self");
+      };
+
+      function back() {
+        location.reload();
+      };
   });
 };
 
 function searchWikipedia(){
   alert("Key 1 Pressed");
 };
+
+
+
+
 
 var settings = {
     "async": true,
