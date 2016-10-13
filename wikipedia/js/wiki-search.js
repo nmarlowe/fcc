@@ -11,9 +11,3 @@ function searchWikipedia() {
   $("#first-screen").hide();
   $("#results").empty().append('What would you like to search for? ===> <input type="text" id="searchInput" name="search" autofocus>');
 }
-// $(document).on("load", function(){
-//   $("html").on("tap", function(){
-//     alert("Tapped");
-//     $("#searchInput").focus();
-//   })
-// })

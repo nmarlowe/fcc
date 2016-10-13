@@ -81,7 +81,23 @@ input:active,
 input:focus,
 input:visited {
   background-color: #181818;
-  /*border-bottom-color: #fff;*/
+  border-color: #181818;
+  border-bottom-color: #fff;
   border-style: solid;
   color: #fff;
+  outline: none;
+}
+
+@media screen and (min-width: 960px) {
+
+  input,
+  input:active,
+  input:focus,
+  input:visited {
+    background-color: #181818;
+    border-color: #181818;
+    border-style: solid;
+    color: #fff;
+    outline: none;
+  }
 }
