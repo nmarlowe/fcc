@@ -80,7 +80,7 @@ $(function() {
 $(function() {
     $("#menu-1").click(function(e) {
       e.preventDefault(); // if desired...
-      searchWikipedia();
+      startSearch();
     });
   });
 
