@@ -1,11 +1,3 @@
-/*
-1. Can I use an iframe on large screens
-and use a new page on smaller screens?
-
-2. Hide the intro and pills on click.
-Replace intro with bluepill or redpill text
-
-*/
 
 var settings = {
     "async": true,
@@ -28,12 +20,12 @@ function randomArticle() {
       console.log("Extract: " + extract);
 
       $("#first-screen").hide();
-      $("#results").empty().append('Page Title: ' + title + '<br><br>' + 'Page Intro: ' + extract + '<br><br>' + 'Would you like to <a href="#" id="continue-next" class="intro-menu">[c]ontinue</a> to the page or go <a href="#" id="back" class="intro-menu">[b]ack</a> to the main menu? ===> <span class="cursor">_</span>');
+      $("#results").empty().append('Page Title: ' + title + '<br><br>' + 'Page Intro: ' + extract + '<br><br>' + 'Would you like to go<a href="#" id="continue-next" class="intro-menu">[f]orward</a> to the page or go back to the<a href="#" id="back" class="intro-menu">[m]ain</a> to the menu? ===> <span class="cursor">_</span>');
 
       $(document).keydown(function(event) {
-          if (event.which === 67) {
+          if (event.which === 70) {
               continueNext();
-          } else if (event.which === 66) {
+          } else if (event.which === 77) {
               back();
           }
       });
@@ -64,7 +56,7 @@ function randomArticle() {
 $(document).keydown(function(event) {
 
   if (event.which === 49) {
-    searchWikipedia();
+    startSearch();
   } else if (event.which === 50) {
     randomArticle();
     }
