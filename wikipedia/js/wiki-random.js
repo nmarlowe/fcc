@@ -20,10 +20,10 @@ function randomArticle() {
       console.log("Extract: " + extract);
 
       $("#first-screen").hide();
-      $("#results").empty().append('Page Title: ' + title + '<br><br>' + 'Page Intro: ' + extract + '<br><br>' + 'Would you like to go<a href="#" id="continue-next" class="intro-menu">[f]orward</a> to the page or go back to the<a href="#" id="back" class="intro-menu">[m]ain</a> to the menu? ===> <span class="cursor">_</span>');
+      $("#results").empty().append('Page Title: ' + title + '<br><br>' + 'Page Intro: ' + extract + '<br><br>' + 'Would you like to go <a href="#" id="continue-next" class="intro-menu">[p]roceed</a> to the page or go back to the <a href="#" id="back" class="intro-menu">[m]ain</a> to the menu? ===> <span class="cursor">_</span>');
 
       $(document).keydown(function(event) {
-          if (event.which === 70) {
+          if (event.which === 80) {
               continueNext();
           } else if (event.which === 77) {
               back();
