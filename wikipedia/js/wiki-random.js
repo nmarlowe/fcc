@@ -56,8 +56,10 @@ function randomArticle() {
 $(document).keydown(function(event) {
 
   if (event.which === 49) {
+    $(document).off("keydown");
     startSearch();
   } else if (event.which === 50) {
+    $(document).off("keydown");
     randomArticle();
     }
 });
