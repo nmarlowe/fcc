@@ -55,17 +55,24 @@ function searchWikipedia(url) {
       $("#results").empty().append('<div class="select"><p>Select one of the following:</p></div>');
       var searchTitles = response[1];
       var searchLinks = response[3];
-      var searchResults = [];
+      var searchResults = {};
 
-      for (i = 0; i < searchTitles.length; i++) {
-        searchResults.push(searchTitles[i]);
-      }
-      for (j = 0; j < searchLinks.length; j++) {
-        searchResults.push(searchLinks[j]);
-      }
+      searchTitles.forEach(function(item, index) {
+        searchResults[item] = searchLinks[index];
+      });
+      // for (i = 0; i < searchLinks.length; i++) {
+      //   searchResults[i] = Array(searchTitles[i], searchLinks[i]);
+      // }
+
+      // for (i = 0; i < searchTitles.length; i++) {
+      //   searchResults.push(searchTitles[i]);
+      // }
+      // for (j = 0; j < searchLinks.length; j++) {
+      //   searchResults.push(searchLinks[j]);
+      // }
       console.log(searchResults);
       var html = '<ol type="a">';
-      searchLinks.forEach(function (item, index, array) {
+      searchLinks.forEach(function (item, index) {
         html += '<li><a id="'+index+'" class="menu-item" href="' + item + '">' + item + '</a></li>';
       });
 
