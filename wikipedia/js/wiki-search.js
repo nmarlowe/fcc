@@ -72,9 +72,14 @@ function searchWikipedia(url) {
       // }
       console.log(searchResults);
       var html = '<ol type="a">';
-      searchLinks.forEach(function (item, index) {
-        html += '<li><a id="'+index+'" class="menu-item" href="' + item + '">' + item + '</a></li>';
+      $.each(searchResults, function(index, value) {
+        var i = 0;
+        i += 1;
+        html += '<li><a id="'+i+'" class="menu-item" href="' + value + '">' + index + '</a></li>';
       });
+      // searchLinks.forEach(function (item, index) {
+      //   html += '<li><a id="'+index+'" class="menu-item" href="' + item + '">' + item + '</a></li>';
+      // });
 
       // searchTitles.forEach(function (item, index, array) {
       //   $('a[id=index]').text(item);
@@ -86,21 +91,21 @@ function searchWikipedia(url) {
       html += '<p>===> <span class="cursor">_</span></p></div>';
       $("#results").append(html);
 
-      searchTitles.forEach(function (item, index, array) {
-        $('a [id=index]').text(item);
-      });
+      // searchTitles.forEach(function (item, index, array) {
+      //   $('a [id=index]').text(item);
+      // });
 
       $(document).keydown(function(event) {
           if (event.which === 65) {
-              window.location.href = "https://en.wikipedia.org/?curid=" + searchResults[0].pageid;
+              window.location.href = searchLinks[0];
           } else if (event.which === 66) {
-              window.location.href = "https://en.wikipedia.org/?curid=" + searchResults[1].pageid;
+              window.location.href = searchLinks[1];
           } else if (event.which === 67) {
-              window.location.href = "https://en.wikipedia.org/?curid=" + searchResults[2].pageid;
+              window.location.href = searchLinks[2];
           } else if (event.which === 68) {
-              window.location.href = "https://en.wikipedia.org/?curid=" + searchResults[3].pageid;
+              window.location.href = searchLinks[3];
           } else if (event.which === 69) {
-              window.location.href = "https://en.wikipedia.org/?curid=" + searchResults[4].pageid;
+              window.location.href = searchLinks[4];
           } else if (event.which === 77) {
               location.reload();
           }
