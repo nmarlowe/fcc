@@ -61,5 +61,6 @@ function readInput(el, e) {
 
 function startSearch() {
   $("#first-screen").hide();
+  $("#footer").hide();
   $("#results").empty().append('What would you like to search for? ===> <input type="text" id="searchInput" name="search" onkeydown="readInput(this, event)" autofocus>');
 }
