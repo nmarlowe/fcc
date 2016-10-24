@@ -77,8 +77,3 @@ $(function() {
       startSearch();
     });
   });
-
-
-/*
-Use https://en.wikipedia.org/?curid=18630637 to load article with page_id that is returned from random api call
-*/
