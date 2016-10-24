@@ -6,7 +6,7 @@ Collection of projects I am working on at [Free Code Camp](https://freecodecamp.
 
 ### Basic Front End Development Projects
 
-- [x] Build a Tribute Page | [Demo](http://codepen.io/nmarlowe/full/dGxeYW/)
+- [x] Build a Tribute Page | [Demo](https://nmarlowe.github.io/fcc/tribute/) | [Source](https://github.com/nmarlowe/fcc/tree/gh-pages/tribute)
 - [ ] Build a Personal Portfolio Webpage
 
 ### Intermediate Front End Development Projects
