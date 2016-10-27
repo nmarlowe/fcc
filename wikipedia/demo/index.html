@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -67,20 +68,20 @@
 
             </div>
           </div>
-          <img class="dither" id="target" crossorigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Eucalyptus_forrestiana.jpg" />
+          <img class="dither" id="target" crossorigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/8/82/06-WFF_Map_and_Vicinity.png" />
           <!-- <script src="//code.jquery.com/jquery-1.10.2.min.js"></script> -->
-          <script type="text/javascript" src="dist/ditherjs.min.js"></script>
-          <script type="text/javascript" src="dist/jquery.ditherjs.js"></script>
+          <script type="text/javascript" src="../dist/ditherjs.min.js"></script>
+          <script type="text/javascript" src="../dist/jquery.ditherjs.js"></script>
           <script>
               $(function() {
                   console.log('ready');
                   var options = {
-                      "step":2,
+                      "step":1,
                       "algorithm": "atkinson",
                       "monochrome": true,
                       "palette": [
                           [0,0,0],
-                          [255,255,255]
+                          [170,187,153]
                       ]
                       /*
                       "palette": [

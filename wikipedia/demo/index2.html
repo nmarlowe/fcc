@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test</title>
+        <style>
+            .dither {
+                visibility:hidden;
+                width:30%;
+            }
+        </style>
+    </head>
+    <body>
+        <img class="dither" id="target" crossorigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/8/82/06-WFF_Map_and_Vicinity.png" />
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="../src/ditherjs.js"></script>
+        <script src="../src/jquery.ditherjs.js"></script>
+        <script>
+            $(function() {
+                console.log('ready');
+                var options = {
+                    "step":1,
+                    "algorithm": "atkinson",
+                    "monochrome": true,
+                    "palette": [
+                        [0,0,0],
+                        [170,187,153]
+                    ]
+                    /*
+                    "palette": [
+                        [155,155,155],
+                        [244,155,155]
+                        ]
+                        */
+                };
+                $('.dither').ditherJS(options);
+            });
+        </script>
+    </body>
+</html>

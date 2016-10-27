@@ -101,3 +101,8 @@ input:visited {
     outline: none;
   }
 }
+
+.dither {
+    /*visibility:hidden;*/
+    width:20%;
+}
