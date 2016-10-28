@@ -24,6 +24,7 @@ function searchWikipedia(url) {
       html += '<p>===> <span class="cursor">_</span></p></div>';
       $("#results").append(html);
 
+      //TODO: Make randomArticle have an optional argument that takes searchLinks[i] so that the search page looks like the random page with extracts and paigeimages. 
       $(document).keydown(function(event) {
           if (event.which === 65) {
               window.location.href = searchLinks[0];
