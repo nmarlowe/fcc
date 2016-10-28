@@ -73,13 +73,13 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/img\/parrot-zoo.jpg": {
+	"\/img\/mischief.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 31879,
-		"inputAbbreviatedPath": "\/img\/parrot-zoo.jpg",
-		"outputAbbreviatedPath": "\/img\/parrot-zoo.jpg",
+		"initialSize": 69350,
+		"inputAbbreviatedPath": "\/img\/mischief.jpg",
+		"outputAbbreviatedPath": "\/img\/mischief.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

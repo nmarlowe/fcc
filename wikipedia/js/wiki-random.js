@@ -22,7 +22,7 @@ function randomArticle() {
       var pageID = "";
       var title = "";
       var extract = "";
-      var pageImage = "img/parrot-zoo.jpg";
+      var pageImage = "img/mischief.jpg";
 
       pageID = response.query.pageids[0];
       title = response.query.pages[0].title;
