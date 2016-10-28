@@ -31,7 +31,7 @@ function randomArticle() {
         pageImage = response.query.pages[0].thumbnail["original"];
 
       } else {
-        pageImage = "img/parrot-zoo.jpg";
+        pageImage = "img/mischief.jpg";
       }
 
       console.log("Page ID: " + pageID);
