@@ -73,11 +73,22 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/img\/mischief-small.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45182,
+		"inputAbbreviatedPath": "\/img\/mischief-small.jpg",
+		"outputAbbreviatedPath": "\/img\/mischief-small.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/mischief.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 69350,
+		"initialSize": 147662,
 		"inputAbbreviatedPath": "\/img\/mischief.jpg",
 		"outputAbbreviatedPath": "\/img\/mischief.jpg",
 		"outputPathIsOutsideProject": 0,

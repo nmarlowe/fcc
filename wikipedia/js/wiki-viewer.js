@@ -5,6 +5,7 @@
 var searchTerms = "";
 var searchUrl = "";
 var searchTitle = "";
+var searchResultUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&piprop=original%7Cname&origin=%2A&prop=extracts%7Cpageimages&indexpageids=&exintro=1&titles=";
 
 function searchWikipedia(url) {
   $.ajax(url).done(function(response) {
@@ -29,23 +30,40 @@ function searchWikipedia(url) {
       html += '<p>===> <span class="cursor">_</span></p></div>';
       $("#results").append(html);
 
-      //TODO: Make randomArticle have an optional argument that takes searchLinks[i] so that the search page looks like the random page with extracts and paigeimages.
       $(document).keydown(function(event) {
+
           if (event.which === 65) {
-              //window.location.href = searchLinks[0];
-              console.log(searchTitles[0]);
+            // a key
               searchTitle = "";
-              searchTitle = searchTitle[0];
-              searchArticle();
+              searchTitle = searchTitles[0];
+              searchResultUrl += searchTitle;
+              setSearchSettings(searchResultUrl);
           } else if (event.which === 66) {
-              window.location.href = searchLinks[1];
+            // b key
+              searchTitle = "";
+              searchTitle = searchTitles[1];
+              searchResultUrl += searchTitle;
+              setSearchSettings(searchResultUrl);
           } else if (event.which === 67) {
-              window.location.href = searchLinks[2];
+            // c key
+            searchTitle = "";
+            searchTitle = searchTitles[2];
+            searchResultUrl += searchTitle;
+            setSearchSettings(searchResultUrl);
           } else if (event.which === 68) {
-              window.location.href = searchLinks[3];
+            // d key
+            searchTitle = "";
+            searchTitle = searchTitles[3];
+            searchResultUrl += searchTitle;
+            setSearchSettings(searchResultUrl);
           } else if (event.which === 69) {
-              window.location.href = searchLinks[4];
+            // e key
+            searchTitle = "";
+            searchTitle = searchTitles[4];
+            searchResultUrl += searchTitle;
+            setSearchSettings(searchResultUrl);
           } else if (event.which === 70) {
+            // f key
               location.reload();
           }
       });
@@ -60,6 +78,7 @@ function searchWikipedia(url) {
 function readInput(el, e) {
   if (e.keyCode === 13) {
     if (el.value === "") {
+      // if enter is pressed with no characters typed, send to onetoday charity page
       window.open("https://onetoday.google.com/home/projects?utm_source=ifg", "_self");
     } else {
       searchTerms = el.value;
@@ -78,22 +97,22 @@ function startSearch() {
 var searchSettings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&piprop=original%7Cname&origin=%2A&prop=extracts%7Cpageimages&indexpageids=&exintro=1&titles=" + searchTitle,
   "type": "GET"
 };
 
-// "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&piprop=original%7Cname&origin=%2A&prop=extracts%7Cpageimages&indexpageids=&exintro=1&titles=" + searchTitle,
-
-// "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&piprop=original%7Cname&origin=%2A&prop=extracts%7Cpageimages&generator=random&grnnamespace=0&indexpageids=&exintro=1",
-
+function setSearchSettings(link) {
+  // add link from menu item selected to add url to ajax search settings
+  searchSettings["url"] = link;
+  searchArticle();
+}
 
 function searchArticle() {
-  //TODO: Can I put settings in here to set either the pagids or generator=random?
+
   $.ajax(searchSettings).done(function(response) {
       var pageID = "";
       var title = "";
       var extract = "";
-      var pageImage = "img/mischief.jpg";
+      var pageImage = "";
 
       pageID = response.query.pageids[0];
       title = response.query.pages[0].title;
@@ -102,6 +121,7 @@ function searchArticle() {
         pageImage = response.query.pages[0].thumbnail["original"];
 
       } else {
+        // no image returned placeholder
         pageImage = "img/mischief.jpg";
       }
 
@@ -115,8 +135,10 @@ function searchArticle() {
 
       $(document).keydown(function(event) {
           if (event.which === 80) {
+            // p key for proceed
               continueNext();
           } else if (event.which === 77) {
+            // m key for main menu
               back();
           }
       });
@@ -157,7 +179,7 @@ var randomSettings = {
 
 
 function randomArticle() {
-  //TODO: Can I put settings in here to set either the pagids or generator=random?
+
   $.ajax(randomSettings).done(function(response) {
       var pageID = "";
       var title = "";
@@ -184,8 +206,10 @@ function randomArticle() {
 
       $(document).keydown(function(event) {
           if (event.which === 80) {
+            // p key for proceed
               continueNext();
           } else if (event.which === 77) {
+            // m key for main menu
               back();
           }
       });
@@ -216,6 +240,7 @@ function randomArticle() {
 $(document).keydown(function(event) {
 
   if (event.which === 49) {
+    //turns off event listener for main menu
     $(document).off("keydown");
     startSearch();
   } else if (event.which === 50) {
